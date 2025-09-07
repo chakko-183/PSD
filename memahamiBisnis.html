@@ -60,8 +60,8 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'memahamiBisnis';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Data Understanding" href="dataUnderstanding.html" />
-    <link rel="prev" title="Welcome to Miko Jupyter Book" href="intro.html" />
+    <link rel="next" title="Data understanding &amp; Explorasi Data" href="dataUnderstanding.html" />
+    <link rel="prev" title="MY PORTO" href="intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -175,14 +175,13 @@
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="intro.html">
-                    Welcome to Miko Jupyter Book
+                    MY PORTO
                 </a>
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Memahami Bisnis</a></li>
-<li class="toctree-l1"><a class="reference internal" href="dataUnderstanding.html">Data Understanding</a></li>
-<li class="toctree-l1"><a class="reference internal" href="explorasiData.html">Explorasi Data</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#"><strong>Memahami Bisnis</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="dataUnderstanding.html"><strong>Data understanding &amp; Explorasi Data</strong></a></li>
 </ul>
 
     </div>
@@ -380,8 +379,63 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="memahami-bisnis">
-<h1>Memahami Bisnis<a class="headerlink" href="#memahami-bisnis" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="memahami-bisnis">
+<h1><strong>Memahami Bisnis</strong><a class="headerlink" href="#memahami-bisnis" title="Link to this heading">#</a></h1>
+<p>Business Understanding adalah tahap awal proyek data/ML di mana tim memahami konteks bisnis, tujuan, pemangku kepentingan, batasan, dan bagaimana keberhasilan akan diukur. Ini menjembatani masalah bisnis nyata dengan kebutuhan teknis analisis data.</p>
+<ol class="arabic simple">
+<li><p>Tujuan Bisnis (contoh untuk Superstore)</p></li>
+</ol>
+<ul class="simple">
+<li><p>Meningkatkan profitabilitas — identifikasi produk/segmen/region yang   memberi margin terbesar/terkecil.</p></li>
+<li><p>Mengurangi pengiriman terlambat — identifikasi penyebab ship delays dan optimalkan logistik.</p></li>
+<li><p>Meningkatkan retensi pelanggan — temukan pola pelanggan bernilai tinggi.</p></li>
+<li><p>Optimasi stok &amp; kategori produk — kurangi stok mati, tingkatkan bestseller.</p></li>
+</ul>
+<ol class="arabic simple" start="2">
+<li><p>Pertanyaan Bisnis Kunci (business questions)</p></li>
+</ol>
+<ul class="simple">
+<li><p>Produk atau sub-kategori mana yang paling sering rugi?</p></li>
+<li><p>Region mana yang memiliki rata-rata profit per order terendah?</p></li>
+</ul>
+<ol class="arabic simple" start="3">
+<li><p>Pemangku Kepentingan (Stakeholders)</p></li>
+</ol>
+<ul class="simple">
+<li><p>Product Manager / Head of Sales — pengambilan keputusan produk &amp; promosi.</p></li>
+<li><p>Logistik / Operasional — pengiriman dan lead time.</p></li>
+<li><p>Finance — margin, profit/loss.</p></li>
+<li><p>Marketing — segmentasi pelanggan &amp; kampanye.</p></li>
+</ul>
+<ol class="arabic simple" start="4">
+<li><p>Kriteria Keberhasilan (KPIs &amp; Success Metrics)</p></li>
+</ol>
+<p>Contoh KPI terukur:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>* Total Profit (per bulan / quarter) — naik X% dalam 6 bulan.
+
+* Profit Margin per kategori — target M% minimal.
+
+* On-time Shipment Rate — target ≥ 95%.
+
+* Customer Lifetime Value (CLTV) peningkatan.
+</pre></div>
+</div>
+<ol class="arabic simple" start="5">
+<li><p>Batasan &amp; Asumsi</p></li>
+</ol>
+<ul class="simple">
+<li><p>Kualitas data: asumsi bahwa data transaksi lengkap untuk periode analisis.</p></li>
+<li><p>Konektivitas &amp; privasi: data sensitif (customer name/ID) tidak dibagikan sembarangan.</p></li>
+<li><p>Waktu: analisis hanya untuk rentang tanggal tertentu (mis. 2017-2018).</p></li>
+</ul>
+<ol class="arabic simple" start="6">
+<li><p>Output Bisnis yang Diharapkan</p></li>
+</ol>
+<ul class="simple">
+<li><p>Dashboard KPI (sales, profit by region/category).</p></li>
+<li><p>Rekomendasi pricing/discount policy berdasarkan efektivitas diskon.</p></li>
+<li><p>Daftar aksi prioritas (mis. hapus item loss-making, optimasi shipping).</p></li>
+</ul>
 </section>
 
     <script type="text/x-thebe-config">
@@ -420,7 +474,7 @@ document.write(`
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Welcome to Miko Jupyter Book</p>
+        <p class="prev-next-title">MY PORTO</p>
       </div>
     </a>
     <a class="right-next"
@@ -428,7 +482,7 @@ document.write(`
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Data Understanding</p>
+        <p class="prev-next-title"><strong>Data understanding &amp; Explorasi Data</strong></p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
