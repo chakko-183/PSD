@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Memahami Bisnis &#8212; My sample book</title>
+    <title>forecasting &#8212; My sample book</title>
   
   
   
@@ -57,11 +57,11 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'memahamiBisnis';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'forecasting';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Data understanding" href="dataUnderstanding.html" />
-    <link rel="prev" title="MY PORTO" href="intro.html" />
+    <link rel="next" title="data Crawling NO2" href="ngambilData.html" />
+    <link rel="prev" title="Bagging Classifer" href="Bagging.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -180,7 +180,7 @@
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#"><strong>Memahami Bisnis</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="memahamiBisnis.html"><strong>Memahami Bisnis</strong></a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="dataUnderstanding.html"><strong>Data understanding</strong></a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="explorasiData.html"><strong>Explorasi Data</strong></a></li>
 <li class="toctree-l2"><a class="reference internal" href="overSampling.html"><strong>Over Sampling</strong></a></li>
@@ -188,7 +188,7 @@
 <li class="toctree-l2"><a class="reference internal" href="Bagging.html"><strong>Bagging Classifer</strong></a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="forecasting.html"><strong>forecasting</strong></a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#"><strong>forecasting</strong></a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="ngambilData.html"><strong>data Crawling NO2</strong></a></li>
 <li class="toctree-l2"><a class="reference internal" href="readDataset.html"><strong>read dataset</strong></a></li>
 </ul>
@@ -264,7 +264,7 @@
       
       
       
-      <li><a href="https://github.com/chakko-183/PSD.git/issues/new?title=Issue%20on%20page%20%2FmemahamiBisnis.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/chakko-183/PSD.git/issues/new?title=Issue%20on%20page%20%2Fforecasting.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -294,7 +294,7 @@
       
       
       
-      <li><a href="_sources/memahamiBisnis.ipynb" target="_blank"
+      <li><a href="_sources/forecasting.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -365,7 +365,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -376,11 +378,21 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Memahami Bisnis</h1>
+    <h1>forecasting</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#apa-itu-forecasting">Apa Itu Forecasting?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mengapa-forecasting-itu-penting">Mengapa Forecasting Itu Penting?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jenis-jenis-forecasting">Jenis-Jenis Forecasting</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -390,63 +402,36 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="memahami-bisnis">
-<h1><strong>Memahami Bisnis</strong><a class="headerlink" href="#memahami-bisnis" title="Link to this heading">#</a></h1>
-<p>Business Understanding adalah tahap awal proyek data/ML di mana tim memahami konteks bisnis, tujuan, pemangku kepentingan, batasan, dan bagaimana keberhasilan akan diukur. Ini menjembatani masalah bisnis nyata dengan kebutuhan teknis analisis data.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="forecasting">
+<h1><strong>forecasting</strong><a class="headerlink" href="#forecasting" title="Link to this heading">#</a></h1>
+<section id="apa-itu-forecasting">
+<h2>Apa Itu Forecasting?<a class="headerlink" href="#apa-itu-forecasting" title="Link to this heading">#</a></h2>
+<p>Forecasting (Peramalan) adalah proses memprediksi nilai atau peristiwa di masa depan berdasarkan data masa lalu dan/atau faktor saat ini.</p>
+<p>Intinya, forecasting menggunakan pola historis, tren, dan hubungan antar variabel untuk membuat perkiraan yang terinformasi tentang apa yang mungkin terjadi di waktu mendatang.</p>
+<p>Dalam konteks matematika dan data sains, forecasting sering dikaitkan dengan Analisis Deret Waktu (Time Series Analysis), di mana data diurutkan secara kronologis (misalnya, harga saham harian, penjualan bulanan, atau suhu tahunan).</p>
+</section>
+<section id="mengapa-forecasting-itu-penting">
+<h2>Mengapa Forecasting Itu Penting?<a class="headerlink" href="#mengapa-forecasting-itu-penting" title="Link to this heading">#</a></h2>
+<p>Forecasting sangat penting karena memungkinkan pengambilan keputusan yang proaktif dan alokasi sumber daya yang efisien. Tanpa peramalan, organisasi hanya dapat bereaksi terhadap kejadian, yang dapat menyebabkan pemborosan atau kehilangan peluang.</p>
+</section>
+<section id="jenis-jenis-forecasting">
+<h2>Jenis-Jenis Forecasting<a class="headerlink" href="#jenis-jenis-forecasting" title="Link to this heading">#</a></h2>
+<p>Metode forecasting secara umum dapat dibagi menjadi dua kategori besar berdasarkan pendekatan datanya: Kualitatif dan Kuantitatif.</p>
 <ol class="arabic simple">
-<li><p>Tujuan Bisnis (contoh untuk Superstore)</p></li>
+<li><p>Forecasting Kuantitatif</p></li>
 </ol>
-<ul class="simple">
-<li><p>Meningkatkan profitabilitas — identifikasi produk/segmen/region yang   memberi margin terbesar/terkecil.</p></li>
-<li><p>Mengurangi pengiriman terlambat — identifikasi penyebab ship delays dan optimalkan logistik.</p></li>
-<li><p>Meningkatkan retensi pelanggan — temukan pola pelanggan bernilai tinggi.</p></li>
-<li><p>Optimasi stok &amp; kategori produk — kurangi stok mati, tingkatkan bestseller.</p></li>
-</ul>
-<ol class="arabic simple" start="2">
-<li><p>Pertanyaan Bisnis Kunci (business questions)</p></li>
-</ol>
-<ul class="simple">
-<li><p>Produk atau sub-kategori mana yang paling sering rugi?</p></li>
-<li><p>Region mana yang memiliki rata-rata profit per order terendah?</p></li>
-</ul>
-<ol class="arabic simple" start="3">
-<li><p>Pemangku Kepentingan (Stakeholders)</p></li>
-</ol>
-<ul class="simple">
-<li><p>Product Manager / Head of Sales — pengambilan keputusan produk &amp; promosi.</p></li>
-<li><p>Logistik / Operasional — pengiriman dan lead time.</p></li>
-<li><p>Finance — margin, profit/loss.</p></li>
-<li><p>Marketing — segmentasi pelanggan &amp; kampanye.</p></li>
-</ul>
-<ol class="arabic simple" start="4">
-<li><p>Kriteria Keberhasilan (KPIs &amp; Success Metrics)</p></li>
-</ol>
-<p>Contoh KPI terukur:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>* Total Profit (per bulan / quarter) — naik X% dalam 6 bulan.
-
-* Profit Margin per kategori — target M% minimal.
-
-* On-time Shipment Rate — target ≥ 95%.
-
-* Customer Lifetime Value (CLTV) peningkatan.
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Metode ini bergantung pada data historis dan model matematis. Ini cocok ketika tersedia banyak data masa lalu yang relevan.
 </pre></div>
 </div>
-<ol class="arabic simple" start="5">
-<li><p>Batasan &amp; Asumsi</p></li>
+<ol class="arabic simple" start="2">
+<li><p>Forecasting Kualitatif</p></li>
 </ol>
-<ul class="simple">
-<li><p>Kualitas data: asumsi bahwa data transaksi lengkap untuk periode analisis.</p></li>
-<li><p>Konektivitas &amp; privasi: data sensitif (customer name/ID) tidak dibagikan sembarangan.</p></li>
-<li><p>Waktu: analisis hanya untuk rentang tanggal tertentu (mis. 2017-2018).</p></li>
-</ul>
-<ol class="arabic simple" start="6">
-<li><p>Output Bisnis yang Diharapkan</p></li>
-</ol>
-<ul class="simple">
-<li><p>Dashboard KPI (sales, profit by region/category).</p></li>
-<li><p>Rekomendasi pricing/discount policy berdasarkan efektivitas diskon.</p></li>
-<li><p>Daftar aksi prioritas (mis. hapus item loss-making, optimasi shipping).</p></li>
-</ul>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Metode ini digunakan ketika data historis tidak tersedia, tidak relevan, atau ketika situasi sangat unik sehingga dibutuhkan penilaian ahli atau intuisi.
+</pre></div>
+</div>
+</section>
+<div class="toctree-wrapper compound">
+</div>
 </section>
 
     <script type="text/x-thebe-config">
@@ -480,20 +465,20 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="intro.html"
+       href="Bagging.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">MY PORTO</p>
+        <p class="prev-next-title"><strong>Bagging Classifer</strong></p>
       </div>
     </a>
     <a class="right-next"
-       href="dataUnderstanding.html"
+       href="ngambilData.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><strong>Data understanding</strong></p>
+        <p class="prev-next-title"><strong>data Crawling NO2</strong></p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -503,6 +488,23 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#apa-itu-forecasting">Apa Itu Forecasting?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mengapa-forecasting-itu-penting">Mengapa Forecasting Itu Penting?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jenis-jenis-forecasting">Jenis-Jenis Forecasting</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
